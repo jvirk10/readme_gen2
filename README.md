@@ -41,3 +41,5 @@ Feel free to contact for questions:
 Contact me on Github:https://github.com/jvirk10
 
 Email for questions:jasminevirk10@gmail.com
+
+Deployed site:-  https://jvirk10.github.io/readme_gen2/
