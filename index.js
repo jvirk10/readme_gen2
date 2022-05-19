@@ -141,7 +141,7 @@ const promptUser = () => {
 };
 const writeFile = data => {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/README.md', data, err => {
+        fs.writeFile('./dist/README.md', generateMarkdown(data), err => {
             if (err) {
                 reject(err);
                 return;
@@ -152,17 +152,11 @@ const writeFile = data => {
             })
         })
     })
-}
+};
 
 function init() {
     promptUser()
-        .then(answers => {
-            console.log(answers);
-            return generateMarkdown(answers)
-        })
-        .then(data => writeFile(data))
-        .catch(err => {
-            console.log(err);
-        })
+        .then(writeFile)
+        .catch(console.log);
 }
 init();

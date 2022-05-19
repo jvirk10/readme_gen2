@@ -27,7 +27,6 @@ function renderLicenseSection(license) {
 }
 
 function generateMarkdown(answers) {
-    console.log(answers);
     const { title, description, installation, usage, license, contributing, tests, questions, username, email } = answers;
     return `
         # ${title} ${renderLicenseBadge(license)}
